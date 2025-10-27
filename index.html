@@ -1,0 +1,546 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advocate [Your Name] | Cyber & IT Law Specialist - Digital Jurisprudence</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Font Awesome CSS CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Custom CSS for a professional, eye-catching look */
+        :root {
+            --primary-color: #004d40; /* Dark Teal - professional */
+            --secondary-color: #ffd700; /* Gold - accent */
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --dark-bg: #212529;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background-color: var(--primary-color) !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+
+        .navbar .nav-link, .navbar-brand {
+            color: var(--white) !important;
+            font-weight: 500;
+        }
+
+        .navbar .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 77, 64, 0.85), rgba(0, 77, 64, 0.85)), url('https://source.unsplash.com/1600x900/?law,cybersecurity') no-repeat center center/cover;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.3) 80%);
+            mix-blend-mode: overlay;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #e6c200; /* Slightly darker gold */
+            border-color: #e6c200;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        section:nth-of-type(even) {
+            background-color: var(--light-bg);
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            height: 4px;
+            width: 70px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: var(--white);
+            border-radius: 10px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .card-header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-weight: 600;
+            font-size: 1.25rem;
+            border-radius: 10px 10px 0 0 !important;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .card-header i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+        }
+
+        .list-group-item {
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.05rem;
+            color: var(--text-color);
+        }
+
+        .list-group-item:nth-child(odd) {
+            background-color: rgba(0, 77, 64, 0.05); /* Very light primary color tint */
+        }
+        .list-group-item i {
+            margin-right: 8px;
+            color: var(--primary-color);
+        }
+
+        .footer {
+            background-color: var(--dark-bg);
+            color: rgba(255,255,255,0.7);
+            padding: 40px 0;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: var(--white);
+            text-decoration: underline;
+        }
+
+        .social-icons a {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--secondary-color);
+        }
+
+        .form-control {
+            border-radius: 0.5rem;
+            border: 1px solid #ced4da;
+            padding: 10px 15px;
+            box-shadow: none;
+        }
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(0, 77, 64, 0.25);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            .hero-section p {
+                font-size: 1.2rem;
+            }
+            section h2 {
+                font-size: 2rem;
+            }
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#hero"><i class="fas fa-gavel mr-2"></i>Advocate [Your Name]</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#practice-areas">Practice Areas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#approach">My Approach</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#social-strategy">Digital Presence</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section d-flex align-items-center">
+        <div class="container">
+            <h1 class="display-3 font-weight-bold">Navigating the Digital Legal Landscape with Precision and Integrity</h1>
+            <p class="lead">Specializing in Cyber Law, IT Law, Civil Litigation & NI Act Matters.</p>
+            <a href="#contact" class="btn btn-primary btn-lg mt-3">Book a Consultation <i class="fas fa-arrow-right ml-2"></i></a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 text-center">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="lead">As a newly registered Advocate, I bring a fresh, dynamic perspective and a fervent commitment to justice in the evolving digital era. My practice is rooted in a deep understanding of cyber jurisprudence, civil litigation intricacies, and the statutory obligations under the Negotiable Instruments Act. I am dedicated to providing robust legal counsel, proactive dispute resolution, and strategic advisory services to individuals and businesses navigating complex legal challenges.</p>
+                    <p>My mission is to uphold the rule of law with diligence, integrity, and a client-centric approach, ensuring that every legal matter is handled with the utmost professionalism and dedication to achieving favorable outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Areas Section -->
+    <section id="practice-areas" class="bg-white py-5">
+        <div class="container text-center">
+            <h2>My Areas of Practice</h2>
+            <div class="row mt-5">
+                <!-- Cyber Law Card -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header"><i class="fas fa-user-shield"></i>Cyber Law</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><i class="fas fa-check-circle"></i>Data Privacy & Protection (IT Act 2000, GDPR principles)</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle"></i>Cybersecurity Compliance & Audits</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle"></i>Cybercrime Defense & Digital Forensics</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle"></i>Online Defamation & Content Regulation</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle"></i>Social Media Law & Platform Liability</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- IT Law Card -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header"><i class="fas fa-laptop-code"></i>IT Law</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><i class="fas fa-check-circle"></i>Software Licensing & SaaS Agreements</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle"></i>Intellectual Property Rights in Technology</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle"></i>E-commerce Regulations & Consumer Laws</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle"></i>IT Contracts & Vendor Disputes</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle"></i>Technology Transaction Advisory</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Civil Litigation Card -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header"><i class="fas fa-balance-scale"></i>Civil Litigation</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><i class="fas fa-check-circle"></i>Contractual Disputes & Breach of Agreement</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle"></i>Property Disputes & Land Matters</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle"></i>Consumer Protection Act Cases</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle"></i>Family Law Matters & Matrimonial Disputes</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle"></i>Recovery Suits & Injunctions</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- NI Act (Section 138) Card -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header"><i class="fas fa-money-check-alt"></i>NI Act (Sec. 138)</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><i class="fas fa-check-circle"></i>Cheque Bounce Cases & Proceedings</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle"></i>Demand Notice Drafting & Issuance</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle"></i>Complaint Filing & Evidence Management</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle"></i>Cross-examination & Argumentation</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle"></i>Settlement Negotiations & Expedited Resolutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Approach Section -->
+    <section id="approach" class="py-5 text-center">
+        <div class="container">
+            <h2>My Judicial Approach</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="lead">My approach is unequivocally client-centric, focusing on transparent communication, meticulous legal analysis, and a relentless pursuit of favorable outcomes. I believe in empowering clients with profound legal knowledge and strategic insights to navigate even the most intricate legal challenges.</p>
+                    <ul class="list-unstyled text-left mx-auto" style="max-width: 600px;">
+                        <li class="my-3"><i class="fas fa-check-double mr-3 text-primary"></i><b>Strategic Counsel:</b> Developing proactive legal strategies tailored to each unique case and client objective.</li>
+                        <li class="my-3"><i class="fas fa-check-double mr-3 text-primary"></i><b>Ethical Advocacy:</b> Upholding the highest standards of professional conduct and integrity in all legal proceedings.</li>
+                        <li class="my-3"><i class="fas fa-check-double mr-3 text-primary"></i><b>Innovative Solutions:</b> Leveraging modern legal tools and insights to address emerging digital legal issues effectively.</li>
+                        <li class="my-3"><i class="fas fa-check-double mr-3 text-primary"></i><b>Clear Communication:</b> Translating complex legal jargon into understandable terms, ensuring clients are always informed.</li>
+                        <li class="my-3"><i class="fas fa-check-double mr-3 text-primary"></i><b>Diligent Representation:</b> Providing thorough and dedicated representation from initial consultation to final resolution.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Strategy Section (Advancements) -->
+    <section id="social-strategy" class="bg-white py-5">
+        <div class="container text-center">
+            <h2>Advancing Your Digital Legal Presence</h2>
+            <p class="lead mb-5">In today's interconnected world, a robust and dynamic social media presence is crucial for legal professionals. Here are some contemporary advancements:</p>
+            <div class="row justify-content-center">
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header"><i class="fab fa-tiktok"></i>Micro-Content Legal Bites</div>
+                        <div class="card-body text-left">
+                            <p class="card-text">Engage audiences with concise, educational content:</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class="fas fa-lightbulb text-info"></i>"Legal Bites" on Instagram Reels & TikTok explaining terms (e.g., "What is a DMCA Takedown?").</li>
+                                <li class="list-group-item"><i class="fas fa-lightbulb text-info"></i>Short animated explainer videos on legal concepts (e.g., "Understanding Data Breach Notification").</li>
+                                <li class="list-group-item"><i class="fas fa-lightbulb text-info"></i>Quick "Myth vs. Fact" series about cyber security laws.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header"><i class="fas fa-microphone-alt"></i>Interactive Live Sessions & Podcasts</div>
+                        <div class="card-body text-left">
+                            <p class="card-text">Foster direct engagement and thought leadership:</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class="fas fa-lightbulb text-info"></i>Weekly "Ask the Advocate" live Q&A sessions on LinkedIn Live/YouTube.</li>
+                                <li class="list-group-item"><i class="fas fa-lightbulb text-info"></i>Guest interviews with cybersecurity experts or tech entrepreneurs.</li>
+                                <li class="list-group-item"><i class="fas fa-lightbulb text-info"></i>Short podcast snippets discussing recent landmark judgments or legal reforms.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header"><i class="fas fa-chart-pie"></i>Visual & Community-Centric Content</div>
+                        <div class="card-body text-left">
+                            <p class="card-text">Simplify complex information and build a community:</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class="fas fa-lightbulb text-info"></i>Infographic digests of IT/Cyber laws, easy-to-understand visual summaries.</li>
+                                <li class="list-group-item"><i class="fas fa-lightbulb text-info"></i>Interactive Instagram Stories/Polls on legal dilemmas.</li>
+                                <li class="list-group-item"><i class="fas fa-lightbulb text-info"></i>Participating in legal tech online communities and offering expert insights.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Contact Me</h2>
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-7">
+                    <p class="text-center lead">I am here to provide diligent legal counsel and advocacy. Please feel free to reach out for a consultation or any legal queries. Your confidentiality is assured.</p>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                            <div class="invalid-feedback">Name cannot be empty.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Subject of your inquiry" required>
+                            <div class="invalid-feedback">Subject cannot be empty.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Your detailed message" required></textarea>
+                            <div class="invalid-feedback">Message cannot be empty.</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block mt-4">Send Message <i class="fas fa-paper-plane ml-2"></i></button>
+                        <div id="form-feedback" class="mt-3 text-center"></div>
+                    </form>
+                </div>
+                <div class="col-lg-4 mt-5 mt-lg-0">
+                    <h4 class="mb-3 text-primary"><i class="fas fa-info-circle mr-2"></i>My Details</h4>
+                    <p><i class="fas fa-map-marker-alt mr-3 text-primary"></i>[Your Office Address], [City], [State], [Pincode]</p>
+                    <p><i class="fas fa-phone mr-3 text-primary"></i><a href="tel:[Your Phone Number]">[Your Phone Number]</a></p>
+                    <p><i class="fas fa-envelope mr-3 text-primary"></i><a href="mailto:[Your Email Address]">[Your Email Address]</a></p>
+                    <p><i class="fas fa-clock mr-3 text-primary"></i>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                    <div class="social-icons mt-4">
+                        <h5 class="text-primary mb-3">Connect Socially:</h5>
+                        <a href="[Your LinkedIn Profile]" target="_blank" class="mr-3 text-dark"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="[Your Twitter Profile]" target="_blank" class="mr-3 text-dark"><i class="fab fa-twitter-square fa-2x"></i></a>
+                        <a href="[Your Instagram Profile]" target="_blank" class="mr-3 text-dark"><i class="fab fa-instagram-square fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Advocate [Your Name]. All Rights Reserved.</p>
+            <p>Designed with <i class="fas fa-heart text-danger"></i> for comprehensive legal solutions.</p>
+            <p>Disclaimer: The information on this website is for general informational purposes only and does not constitute legal advice.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoYVaTupADeoH6uJOoMmyjkI1Xnuelzbyw4GfPyqT/tD2hN/X" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57B+Y1W3vF6r1TzC6L/Bv6TzF6E8zD6Kz" crossorigin="anonymous"></script>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Contact Form Validation
+        const contactForm = document.getElementById('contactForm');
+        const formFeedback = document.getElementById('form-feedback');
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual form submission
+
+            let isValid = true;
+            formFeedback.innerHTML = ''; // Clear previous feedback
+
+            // Validate Name
+            const nameInput = document.getElementById('name');
+            if (nameInput.value.trim() === '') {
+                nameInput.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                nameInput.classList.remove('is-invalid');
+            }
+
+            // Validate Email
+            const emailInput = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value.trim())) {
+                emailInput.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                emailInput.classList.remove('is-invalid');
+            }
+
+            // Validate Subject
+            const subjectInput = document.getElementById('subject');
+            if (subjectInput.value.trim() === '') {
+                subjectInput.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                subjectInput.classList.remove('is-invalid');
+            }
+
+            // Validate Message
+            const messageInput = document.getElementById('message');
+            if (messageInput.value.trim() === '') {
+                messageInput.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                messageInput.classList.remove('is-invalid');
+            }
+
+            if (isValid) {
+                // In a real application, you would send this data to a server (e.g., via AJAX).
+                // For a static GitHub Pages deployment, we just show a success message.
+                formFeedback.innerHTML = '<div class="alert alert-success">Thank you for your message! I will get back to you shortly.</div>';
+                contactForm.reset(); // Clear the form
+                // Remove invalid classes after successful submission if any were there
+                document.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
+            } else {
+                formFeedback.innerHTML = '<div class="alert alert-danger">Please correct the errors in the form.</div>';
+            }
+        });
+    </script>
+</body>
+</html>
